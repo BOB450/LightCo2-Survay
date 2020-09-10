@@ -1,6 +1,8 @@
 
 <!DOCTYPE HTML>
 <html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <head>
 <style>
 body{
@@ -18,10 +20,11 @@ padding:14px;
 body {
   margin: auto;
   width: 50%;
-  border: 3px solid green;
+  border: 5px solid green;
   padding: 10px;
   background-color: lightblue;
 }
+
 /* ----------- basic ----------- */
 #basic{
 border:solid 2px #DEDEDE;
@@ -165,7 +168,7 @@ function myFunction() {
 }
 </script>
 
-<h2>Corbon Survay</h2>
+<h2>Carbon Survay</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   Zipcode: <input type="text" name="zipcode" value="<?php echo $zipcode;?>">
 
@@ -173,10 +176,10 @@ function myFunction() {
 
   <h4>How far do you fly a year:</h4>
   <input type="radio" name="travel" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2">None
-  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5">Short-< 1 Miles
-  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5">Medium > 16 Miles
-  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5"> Long > 40 Miles
-  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="23.5"> Very Long 80+ Miles
+  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5">Short >6K Miles
+  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5">Medium >13.5K Miles
+  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5"> Long > 20K Miles
+
 
   <br><br>
 
@@ -187,9 +190,9 @@ function myFunction() {
   <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.5") echo "checked";?> value="1.5">Vegan
 
   <br><br>
-  <input type="submit" name="Apply" value="Submit">
+  <input class="w3-button w3-amber w3-round" type="submit" name="Apply" value="Submit">
     <br><br>
-<button onclick="myFunction()">Next</button>
+<button class="w3-button w3-amber w3-round" onclick="myFunction()">Next</button>
 
 </form>
 
