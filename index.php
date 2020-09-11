@@ -57,7 +57,7 @@ function myFunction() {
 
 <h2>Carbon Survay</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  Zipcode: <input type="text" name="zipcode" value="<?php echo $zipcode;?>">
+  Zipcode: <input class="w3-input w3-border w3-round-large" type="text" name="zipcode" value="<?php echo $zipcode;?>">
 
   <br><br>
 
