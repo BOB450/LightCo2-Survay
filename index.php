@@ -1,11 +1,208 @@
+
 <!DOCTYPE HTML>
 <html>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="style-2.css">
+<style>
+body{
+font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+p, h1, form, button{border:0; margin:0; padding:0;}
+.spacer{clear:both; height:1px;}
+/* ----------- My Form ----------- */
+.form{
+margin:0 auto;
+width:400px;
+padding:14px;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+			align-items: center;
+	-webkit-box-pack: center;
+			justify-content: center;
+	font-family: 'Nunito', sans-serif;
+	color: #192E5B;
+	background-color: #ECF8FF;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+  }
+
+
+  #form-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      flex-direction: column;
+  -webkit-box-align: center;
+      align-items: center;
+  }
+
+  form {
+  width: 90%;
+  max-width: 500px;
+  }
+  form #form-title {
+  margin-top: 0;
+  font-weight: 400;
+  text-align: center;
+  }
+
+/* ----------- basic ----------- */
+#basic{
+border:solid 2px #DEDEDE;
+}
+#basic h1 {
+font-size:14px;
+font-weight:bold;
+margin-bottom:8px;
+}
+h2 {
+
+  width: 50%;
+  padding: 4px;
+}
+#basic p{
+font-size:11px;
+color:#666666;
+margin-bottom:20px;
+border-bottom:solid 1px #dedede;
+padding-bottom:10px;
+}
+#basic label{
+display:block;
+font-weight:bold;
+text-align:right;
+width:140px;
+float:left;
+}
+#basic .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+
+
+
+/* ----------- stylized ----------- */
+#stylized{
+border:solid 2px #b7ddf2;
+background:#ebf4fb;
+
+}
+#stylized h1 {
+font-size:14px;
+font-weight:bold;
+margin-bottom:8px;
+}
+#stylized p{
+font-size:11px;
+color:#666666;
+margin-bottom:20px;
+border-bottom:solid 1px #b7ddf2;
+padding-bottom:10px;
+}
+#stylized label{
+display:block;
+font-weight:bold;
+text-align:right;
+width:140px;
+float:left;
+}
+#stylized .small{
+color:#666666;
+display:block;
+font-size:11px;
+font-weight:normal;
+text-align:right;
+width:140px;
+}
+button,input
+{
+  width: 100%;
+}
+
+.buttonholder{ text-align: center; }
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+</style>
 </head>
 <body>
 
@@ -55,55 +252,49 @@ function myFunction() {
 }
 </script>
 
-<h2>Carbon Survay</h2>
+
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-  Zipcode: <input class="w3-input w3-border w3-round-large" type="text" name="zipcode" value="<?php echo $zipcode;?>">
+  <h2>Carbon Survay</h2>
+  Zipcode: <input type="text" class="w3-input w3-border w3-round-large" name="zipcode" value="<?php echo $zipcode;?>">
 
   <br><br>
 
-  <h4 id = "form-title">How far do you fly a year:</h4>
-  <div id="debt-amount-slider">
-  <input type="radio" name="travel" id="1" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2" required>
-  <label for="1" data-debt-amount="None"></label>
-  <input type="radio" name="travel" id="2" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5" required>
-  <label for="2" data-debt-amount="Short"></label>
-  <input type="radio" name="travel" id="3" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5" required>
-  <label for="3" data-debt-amount="Medium"></label>
-  <input type="radio" name="travel" id="4" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5" required>
-  <label for="4" data-debt-amount="Long"></label>
-  <div id="debt-amount-pos"></div>
-  </div>
+  <h4>How far do you fly a year:</h4>
+
+  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2">None
+  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5">Short >6K Miles
+  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5">Medium >13.5K Miles
+  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5"> Long > 20K Miles
 
 
   <br><br>
 
-<h4 id="form-title">  Diet catagory:</h4>
-<div id="debt-amount-slider-2">
-  <input type="radio" name="diet" id="1" <?php if (isset($diet) && $diet=="3.3") echo "checked";?> value="3.3">
-  <label for="1" data-debt-amount="$10k"></label>
-  <input type="radio" name="diet" id="2" <?php if (isset($diet) && $diet=="2.5") echo "checked";?> value="2.5">
-  <label for="2" data-debt-amount="$10k"></label>
-  <input type="radio" name="diet" id="3" <?php if (isset($diet) && $diet=="1.7") echo "checked";?> value="1.7">
-  <label for="3" data-debt-amount="$10k"></label>
-  <input type="radio" name="diet" id="4" <?php if (isset($diet) && $diet=="1.5") echo "checked";?> value="1.5">
-  <label for="4" data-debt-amount="$10k"></label>
-  <div id="debt-amount-pos-2"></div>
+<h4>  Diet catagory:</h4>
+  <input type="radio" name="diet" <?php if (isset($diet) && $diet=="3.3") echo "checked";?> value="3.3">Carnavore
+  <input type="radio" name="diet" <?php if (isset($diet) && $diet=="2.5") echo "checked";?> value="2.5">Omnivore
+  <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.7") echo "checked";?> value="1.7">Vegetarian
+  <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.5") echo "checked";?> value="1.5">Vegan
+
+  <br><br>
+  <div class="buttonholder">
+  <input class="w3-button w3-amber w3-round"  class="block" type="submit" name="Apply" value="Submit">
 </div>
-  <br><br>
-  <input class="w3-button w3-amber w3-round" type="submit" name="Apply" value="Submit">
     <br><br>
-<button class="w3-button w3-amber w3-round" onclick="myFunction()">Next</button>
+  <?php
+  echo "<h2>Your co2 footprint in Tons:</h2>";
 
+  echo "<br>";
+  echo 13.5 + $diet + $travel;
+
+  ?>
+  <br><br>
+<div class="buttonholder">
+<button class="w3-button w3-amber w3-round"  class="block" onclick="myFunction()"> Next </button>
+</div>
 </form>
 
 
-<?php
-echo "<h2>Your co2 footprint in Tons:</h2>";
 
-echo "<br>";
-echo 13.5 + $diet + $travel;
-
-?>
 
 </body>
 </html>
