@@ -1,124 +1,11 @@
-
 <!DOCTYPE HTML>
 <html>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <head>
-<style>
-body{
-font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-font-size:12px;
-}
-p, h1, form, button{border:0; margin:0; padding:0;}
-.spacer{clear:both; height:1px;}
-/* ----------- My Form ----------- */
-.form{
-margin:0 auto;
-width:400px;
-padding:14px;
-}
-body {
-  margin: auto;
-  width: 50%;
-  border: 5px solid green;
-  padding: 10px;
-  background-color: lightblue;
-}
-
-/* ----------- basic ----------- */
-#basic{
-border:solid 2px #DEDEDE;
-}
-#basic h1 {
-font-size:14px;
-font-weight:bold;
-margin-bottom:8px;
-}
-h2 {
-
-  width: 50%;
-  padding: 4px;
-}
-#basic p{
-font-size:11px;
-color:#666666;
-margin-bottom:20px;
-border-bottom:solid 1px #dedede;
-padding-bottom:10px;
-}
-#basic label{
-display:block;
-font-weight:bold;
-text-align:right;
-width:140px;
-float:left;
-}
-#basic .small{
-color:#666666;
-display:block;
-font-size:11px;
-font-weight:normal;
-text-align:right;
-width:140px;
-}
-
-
-
-/* ----------- stylized ----------- */
-#stylized{
-border:solid 2px #b7ddf2;
-background:#ebf4fb;
-
-}
-#stylized h1 {
-font-size:14px;
-font-weight:bold;
-margin-bottom:8px;
-}
-#stylized p{
-font-size:11px;
-color:#666666;
-margin-bottom:20px;
-border-bottom:solid 1px #b7ddf2;
-padding-bottom:10px;
-}
-#stylized label{
-display:block;
-font-weight:bold;
-text-align:right;
-width:140px;
-float:left;
-}
-#stylized .small{
-color:#666666;
-display:block;
-font-size:11px;
-font-weight:normal;
-text-align:right;
-width:140px;
-}
-#stylized input{
-float:left;
-font-size:12px;
-padding:4px 2px;
-border:solid 1px #aacfe4;
-width:200px;
-margin:2px 0 20px 10px;
-}
-#stylized button{
-clear:both;
-margin-left:160px;
-width:125px;
-height:31px;
-background:#444;
-text-align:center;
-line-height:31px;
-color:#FFFFFF;
-font-size:11px;
-font-weight:bold;
-}
-
-</style>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style-2.css">
 </head>
 <body>
 
@@ -174,21 +61,34 @@ function myFunction() {
 
   <br><br>
 
-  <h4>How far do you fly a year:</h4>
-  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2">None
-  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5">Short >6K Miles
-  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5">Medium >13.5K Miles
-  <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5"> Long > 20K Miles
+  <h4 id = "form-title">How far do you fly a year:</h4>
+  <div id="debt-amount-slider">
+  <input type="radio" name="travel" id="1" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2" required>
+  <label for="1" data-debt-amount="None"></label>
+  <input type="radio" name="travel" id="2" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5" required>
+  <label for="2" data-debt-amount="Short"></label>
+  <input type="radio" name="travel" id="3" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5" required>
+  <label for="3" data-debt-amount="Medium"></label>
+  <input type="radio" name="travel" id="4" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5" required>
+  <label for="4" data-debt-amount="Long"></label>
+  <div id="debt-amount-pos"></div>
+  </div>
 
 
   <br><br>
 
-<h4>  Diet catagory:</h4>
-  <input type="radio" name="diet" <?php if (isset($diet) && $diet=="3.3") echo "checked";?> value="3.3">Carnavore
-  <input type="radio" name="diet" <?php if (isset($diet) && $diet=="2.5") echo "checked";?> value="2.5">Omnivore
-  <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.7") echo "checked";?> value="1.7">Vegetarian
-  <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.5") echo "checked";?> value="1.5">Vegan
-
+<h4 id="form-title">  Diet catagory:</h4>
+<div id="debt-amount-slider-2">
+  <input type="radio" name="diet" id="1" <?php if (isset($diet) && $diet=="3.3") echo "checked";?> value="3.3">
+  <label for="1" data-debt-amount="$10k"></label>
+  <input type="radio" name="diet" id="2" <?php if (isset($diet) && $diet=="2.5") echo "checked";?> value="2.5">
+  <label for="2" data-debt-amount="$10k"></label>
+  <input type="radio" name="diet" id="3" <?php if (isset($diet) && $diet=="1.7") echo "checked";?> value="1.7">
+  <label for="3" data-debt-amount="$10k"></label>
+  <input type="radio" name="diet" id="4" <?php if (isset($diet) && $diet=="1.5") echo "checked";?> value="1.5">
+  <label for="4" data-debt-amount="$10k"></label>
+  <div id="debt-amount-pos-2"></div>
+</div>
   <br><br>
   <input class="w3-button w3-amber w3-round" type="submit" name="Apply" value="Submit">
     <br><br>
