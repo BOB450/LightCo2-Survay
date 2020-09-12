@@ -47,7 +47,7 @@ function test_input($data) {
 function myFunction() {
   var howmuch = <?php echo $total = 13.5 + $diet + $travel; ?>;
   var howmuchr = Math.round(howmuch);
-  document.write(howmuchr);
+
   window.location.replace("http://www.lightco2.org/buy-your-offset/" +howmuchr);
 }
 </script>
