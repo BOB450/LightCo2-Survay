@@ -1,5 +1,5 @@
 body{
-font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+font-family: Sifon;
 font-size:12px;
 }
 p, h1, form, button{border:0; margin:0; padding:0;}
@@ -234,3 +234,19 @@ button,input
 	opacity: 1;
 	right: 0;
   }
+
+  input[type=text] {
+	background-color:  #F1A104;
+	border: 6px solid  #F1A104;
+	width: 50%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	color: #b7ddf2;
+
+  }	
+
+  @font-face{
+    font-family: Sifon;
+    src: local('SIFONN_PRO.woff'), url('SIFONN_PRO.woff') format('woff');
+}
