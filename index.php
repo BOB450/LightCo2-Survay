@@ -80,7 +80,7 @@ function myFunction() {
 
   <br><br>
   <div class="buttonholder">
-  <input class="w3-button w3-amber w3-round"  class="block" type="submit" name="Apply" value="Submit">
+  <input class="button" class="block" type="submit" name="Apply" value="Submit">
 </div>
     <br><br>
   <?php
@@ -92,8 +92,8 @@ function myFunction() {
   ?>
   <br><br>
 <div class="buttonholder">
-<button class="w3-button w3-amber w3-round"  class="block" onclick="myFunction()"> Next </button>
-</div>
+<button class="button" onclick="myFunction()"> <span>Next </span> </button>
+<div>
 </form>
 
 
