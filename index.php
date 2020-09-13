@@ -56,7 +56,7 @@ function myFunction() {
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
   <div class="left"> <!--This div contains the zipcode textbox. TODO: format-->
-    <div style="font-size: 30px;">Zip Code?</div> <input type="text" class="w3-input w3-border w3-round-large" name="zipcode" value="<?php echo $zipcode;?>">
+    <div class="text">Zip Code?</div> <input type="text" class="w3-input w3-border w3-round-large" name="zipcode" value="<?php echo $zipcode;?>">
     <div style="font-size: 20px;">We will never share this.</div>
   </div>
 
