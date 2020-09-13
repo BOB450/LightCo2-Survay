@@ -5,48 +5,17 @@ font-size:12px;
 p, h1, form, button{border:0; margin:0; padding:0;}
 .spacer{clear:both; height:1px;}
 /* ----------- My Form ----------- */
-.form{
-margin:0 auto;
-width:400px;
-padding:14px;
-}
 html, body {
 	width: 100%;
 	height: 100%;
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-align: center;
-			align-items: center;
-	-webkit-box-pack: center;
-			justify-content: center;
 	color: #192E5B;
 	background-color: #ECF8FF;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 		-ms-user-select: none;
 			user-select: none;
-  }
-
-
-  #form-wrapper {
-  width: 100%;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      flex-direction: column;
-  -webkit-box-align: center;
-      align-items: center;
-  }
-
-  form {
-  width: 90%;
-  max-width: 500px;
-  }
-  form #form-title {
-  margin-top: 0;
-  font-weight: 400;
-  text-align: center;
   }
 
 /* ----------- basic ----------- */
@@ -128,72 +97,6 @@ button,input
 
 .buttonholder{ text-align: center; }
 
-/* Customize the label (the container) */
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-/* Create a custom radio button */
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}
-
 .button {
 	display: inline-block;
 	border-radius: 10px;
@@ -237,7 +140,7 @@ button,input
   input[type=text] {
 	background-color:  #F1A104;
 	border: 6px solid  #F1A104;
-	width: 50%;
+	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	box-sizing: border-box;
@@ -250,3 +153,28 @@ button,input
     font-family: Sifon;
     src: local('SIFONN_PRO.woff'), url('SIFONN_PRO.woff') format('woff');
 }
+
+.left {
+	padding:20px;
+	float:right;
+	width:40%; /* The width is 40%, by default */
+  }
+  
+  .main {
+	padding:20px;
+	float:left;
+	width:60%; /* The width is 60%, by default */
+  }
+  
+  .right {
+	padding:20px;
+	float:left;
+	width:40%; /* The width is 40%, by default */
+  }
+  
+  /* Use a media query to add a break point at 800px: */
+  @media screen and (max-width:800px) {
+	.left, .main, .right {
+	  width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+	}
+  }
