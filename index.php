@@ -65,18 +65,50 @@ function myFunction() {
   <div class="main">
     <div> <!--This div contains the diet question for formating. TODO: format-->
         <h4>  Diet catagory:</h4>
-       <input type="radio" name="diet" <?php if (isset($diet) && $diet=="3.3") echo "checked";?> value="3.3">Carnavore
-       <input type="radio" name="diet" <?php if (isset($diet) && $diet=="2.5") echo "checked";?> value="2.5">Omnivore
-       <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.7") echo "checked";?> value="1.7">Vegetarian
-       <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.5") echo "checked";?> value="1.5">Vegan
+        <label class="container">Carnavore
+          <input type="radio" name="diet" <?php if (isset($diet) && $diet=="3.3") echo "checked";?> value="3.3">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Omnivore
+          <input type="radio" name="diet" <?php if (isset($diet) && $diet=="2.5") echo "checked";?> value="2.5">
+          <span class="checkmark"></span>
+        </label>
+        
+        <label class="container">Vegetarian
+          <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.7") echo "checked";?> value="1.7">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Vegan
+          <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.5") echo "checked";?> value="1.5">
+          <span class="checkmark"></span>
+        </label>
     </div>
     <br><br>
     <div> <!--This div contains the Milage textbox. TODO: format-->
-      <h4>How far do you fly a year:</h4>
-      <input type="radio" name="travel" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2">None
-      <input type="radio" name="travel" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5">Short >6K Miles
-      <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5">Medium >13.5K Mile
-      <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5"> Long > 20K Mil
+      <h4>How far do you drive a year?</h4>
+
+      <label class="container">None
+          <input type="radio" name="travel" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Short >6K Miles
+        <input type="radio" name="travel" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Medium >13.5K Mile
+        <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5">
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="container">Long >20K Mil
+          <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5"> 
+          <span class="checkmark"></span>
+        </label>
+
     </div>
   </div>
   <br><br>
