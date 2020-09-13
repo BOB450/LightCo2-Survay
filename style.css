@@ -16,6 +16,10 @@ html, body {
 	   -moz-user-select: none;
 		-ms-user-select: none;
 			user-select: none;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
   }
 
 /* ----------- basic ----------- */
@@ -178,3 +182,6 @@ button,input
 	  width:100%; /* The width is 100%, when the viewport is 800px or smaller */
 	}
   }
+  form {
+	display: inline-block;
+  } 

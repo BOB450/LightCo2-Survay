@@ -57,7 +57,7 @@ function myFunction() {
 
   <div class="left"> <!--This div contains the zipcode textbox. TODO: format-->
     <div style="font-size: 30px;">Zip Code?</div> <input type="text" class="w3-input w3-border w3-round-large" name="zipcode" value="<?php echo $zipcode;?>">
-    <div style="font-size: 25px;">We will never share this.</div>
+    <div style="font-size: 20px;">We will never share this.</div>
   </div>
 
   <br><br>
@@ -88,7 +88,7 @@ function myFunction() {
     <br><br>
 
     <?php
-      echo "<h2>Your co2 footprint in Tons:</h2>";
+      echo "<h4>Your CO2 Tons:</h4>";
       echo "<br>";
       echo 13.5 + $diet + $travel;
     ?>
