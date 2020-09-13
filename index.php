@@ -120,9 +120,9 @@ function myFunction() {
     <br><br>
 
     <?php
-      echo "<h4>Your CO2 Tons:</h4>";
-      echo "<br>";
+      echo "<h4>You Produce ";
       echo 13.5 + $diet + $travel;
+      echo " tonnes of CO<sub>2</sub>.</h4>"
     ?>
 
     <br><br>
