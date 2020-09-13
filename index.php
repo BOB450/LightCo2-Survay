@@ -11,7 +11,7 @@
 <?php
 // define variables and set to empty values
 $zipcodeErr = $dietErr = $travelErr = 0;
-$zipcode = $diet = $travel = 0;
+$zipcode = $diet = $travel = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -64,47 +64,47 @@ function myFunction() {
 
   <div class="main">
     <div> <!--This div contains the diet question for formating. TODO: format-->
-        <h4>  Diet catagory:</h4>
-        <label class="container">Carnavore
+        <h4 class="text"> What Is Your Typical Diet?</h4>
+        <label class="container">A Lot Of Meat (Daily)
           <input type="radio" name="diet" <?php if (isset($diet) && $diet=="3.3") echo "checked";?> value="3.3">
           <span class="checkmark"></span>
         </label>
 
-        <label class="container">Omnivore
+        <label class="container">Some Meat (1-2 times Weekly)
           <input type="radio" name="diet" <?php if (isset($diet) && $diet=="2.5") echo "checked";?> value="2.5">
           <span class="checkmark"></span>
         </label>
         
-        <label class="container">Vegetarian
+        <label class="container">Vegetarian (No Meat)
           <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.7") echo "checked";?> value="1.7">
           <span class="checkmark"></span>
         </label>
 
-        <label class="container">Vegan
+        <label class="container">Vegan (No Animal Products)
           <input type="radio" name="diet" <?php if (isset($diet) && $diet=="1.5") echo "checked";?> value="1.5">
           <span class="checkmark"></span>
         </label>
     </div>
     <br><br>
     <div> <!--This div contains the Milage textbox. TODO: format-->
-      <h4>How far do you drive a year?</h4>
+      <h4 class="text">How far do you drive in a year?</h4>
 
-      <label class="container">None
+      <label class="container">None (Electric/Public Transport)
           <input type="radio" name="travel" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2">
           <span class="checkmark"></span>
         </label>
 
-        <label class="container">Short >6K Miles
+        <label class="container">Short (Less Than 6K Miles)
         <input type="radio" name="travel" <?php if (isset($travel) && $travel=="2.5") echo "checked";?> value=".5">
           <span class="checkmark"></span>
         </label>
 
-        <label class="container">Medium >13.5K Mile
+        <label class="container">Medium (Less Than 13.5K Miles)
         <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.7") echo "checked";?> value="4.5">
           <span class="checkmark"></span>
         </label>
 
-        <label class="container">Long >20K Mil
+        <label class="container">Long (Less Than 20K Miles)
           <input type="radio" name="travel" <?php if (isset($travel) && $travel=="1.5") echo "checked";?> value="11.5"> 
           <span class="checkmark"></span>
         </label>
@@ -120,9 +120,9 @@ function myFunction() {
     <br><br>
 
     <?php
-      echo "<h4>You Produce ";
+      echo "<h3 class='text';>You Produce ";
       echo 13.5 + $diet + $travel;
-      echo " tonnes of CO<sub>2</sub>.</h4>"
+      echo " Tonnes of CO<sub>2</sub>.</h3>"
     ?>
 
     <br><br>
