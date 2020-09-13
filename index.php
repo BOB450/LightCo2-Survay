@@ -89,7 +89,7 @@ function myFunction() {
     <div> <!--This div contains the Milage textbox. TODO: format-->
       <h4 class="text">How far do you drive in a year?</h4>
 
-      <label class="container">None (Electric/Public Transport)
+      <label class="container">None (Electric/Public)
           <input type="radio" name="travel" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2">
           <span class="checkmark"></span>
         </label>

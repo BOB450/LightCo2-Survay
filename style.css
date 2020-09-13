@@ -109,7 +109,7 @@ button,input
 	border: none;
 	color: #ECF8FF;
 	text-align: center;
-	font-size: 28px;
+	font-size: 35px;
 	padding: 20px;
 	width: 100%;
 	transition: all 0.5s;
@@ -253,6 +253,6 @@ button,input
   }
 
   .text {
-	font-size: 40;
+	font-size: 30px;
 	font-family: Sifon;  
   }
