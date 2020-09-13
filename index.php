@@ -82,7 +82,7 @@ function myFunction() {
   <br><br>
   <div class="right">
     <div class="buttonholder"> <!--This div containes the submit button. TODO: format-->
-      <input class="button" class="block" type="submit" name="Apply" value="Submit">
+      <input class="button" class="block" type="submit" name="Apply" value="Calculate">
     </div>
 
     <br><br>
@@ -95,7 +95,7 @@ function myFunction() {
 
     <br><br>
 
-    <div class="buttonholder"> <!--This div containes the Next Button. TODO: format-->
+    <div> <!--This div containes the Next Button. TODO: format-->
      <button class="button" onclick="myFunction()"> <span>Next </span> </button>
     <div>
   </div>

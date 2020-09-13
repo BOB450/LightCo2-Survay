@@ -110,7 +110,7 @@ button,input
 	text-align: center;
 	font-size: 28px;
 	padding: 20px;
-	width: 200px;
+	width: 100%;
 	transition: all 0.5s;
 	cursor: pointer;
 	margin: 5px;
@@ -150,6 +150,7 @@ button,input
 	box-sizing: border-box;
 	color: #ECF8FF;
 	font-size: 40px;
+	text-align: center;
 
   }	
 
