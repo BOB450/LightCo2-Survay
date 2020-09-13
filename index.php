@@ -64,7 +64,7 @@ function myFunction() {
 
   <div class="main">
     <div> <!--This div contains the diet question for formating. TODO: format-->
-        <h4 class="text"> Your Typical Diet?</h4>
+        <h4 class="text"> What Is Your Typical Diet?</h4>
         <label class="container">A Lot Of Meat (Daily)
           <input type="radio" name="diet" <?php if (isset($diet) && $diet=="3.3") echo "checked";?> value="3.3">
           <span class="checkmark"></span>
@@ -87,7 +87,7 @@ function myFunction() {
     </div>
     <br><br>
     <div> <!--This div contains the Milage textbox. TODO: format-->
-      <h4 class="text">Yearly Car Milage?</h4>
+      <h4 class="text">How far do you drive in a year?</h4>
 
       <label class="container">None (Electric/Public)
           <input type="radio" name="travel" <?php if (isset($travel) && $travel=="3.3") echo "checked";?> value=".2">
